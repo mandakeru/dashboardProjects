@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Initial date:</strong>
+  <%= @deadline.initial_date %>
+</p>
+
+<p>
+  <strong>Final date:</strong>
+  <%= @deadline.final_date %>
+</p>
+
+<%= link_to 'Edit', edit_deadline_path(@deadline) %> |
+<%= link_to 'Back', deadlines_path %>

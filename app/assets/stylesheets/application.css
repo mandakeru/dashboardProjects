@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= AdminLTE.min
+ *= 
+ *= _all-skins.min
+ *= font-awsome.min
+ *= jquery-jvectormap-1.2.2
+ *= ionicons.min
+ *= twitter-bootstrap-rails
  */

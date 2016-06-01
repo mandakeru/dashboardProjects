@@ -1,0 +1,56 @@
+<div class="box box-primary">
+  <div class="box-body">
+    
+    <p id="notice"><%= notice %></p>
+
+<h1>Todos os projetos</h1>
+
+<table class="table table-bordered table-striped dataTable">
+  <thead>
+    <tr>
+      <th>Head</th>
+      <th>Manager</th>
+      <th>Project title</th>
+      <th>Area</th>
+      <th>Description</th>
+      <th>Representant</th>
+      <th>Sprints</th>
+      <th>Status</th>
+      <th>Resources</th>
+      <th>Deadline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.head %></td>
+        <td><%= project.manager %></td>
+        <td><%= project.project_title %></td>
+        <td><%= project.area %></td>
+        <td><%= project.description %></td>
+        <td><%= project.representant %></td>
+        <td><%= project.sprints %></td>
+        <td><%= project.status %></td>
+        <td><%= project.resources_id %></td>
+        <td><%= project.deadline %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button class="btn btn-default"><%= link_to 'Criar Projeto', new_project_path %></button>
+
+  </div>
+  
+</div>
+
+  
+
+

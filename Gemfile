@@ -41,6 +41,16 @@ gem 'simple_form'
 # bootstrap
 gem 'twitter-bootstrap-rails'
 
+# pack Gems Dashborad
+gem 'bootstrap-sass', '~> 3.3.6'
+gem "font-awesome-rails"
+gem 'morrisjs-rails'
+gem 'switchery-rails'
+gem 'bootstrap-select-rails'
+gem 'fastclick-rails'
+gem 'twitter-bootstrap-rails'
+gem 'jasny-bootstrap-rails'
+
 
 
 # Use Capistrano for deployment

@@ -1,0 +1,52 @@
+
+  
+  
+  <%= simple_form_for(@project) do |f| %>
+  <%= f.error_notification %>
+<form class="form-horizontal">
+  <div class="box-body">
+      
+     <h4><%= f.input :head, label: 'Head', class: 'form-control' %></h4><br> 
+   
+    
+   <h4><%= f.input :manager, class: 'form-control' %></h4>   
+  
+   <h4><%= f.input :project_title, label: 'Título do projeto', class: 'form-control' %></h4>   
+    
+    <h4><%= f.input :area, class: 'form-control' %></h4>  
+    
+    
+    <h4><%= f.input :description,label: 'Descrição', class: 'form-control' %></h4>  
+    
+    
+    <h4><%= f.input :representant, label: 'Representante externo',  class: 'form-control' %></h4>  
+   
+   
+    <h4><%= f.input :sprints, label: 'Sprints/total', class: 'form-control' %></h4>   
+    
+    
+    <h4><%= f.input :status, label: 'Status atual', class: 'form-control' %></h4>   
+    
+    
+    <h4> <%= f.input :resources_id, label: 'Recursos' , class: 'form-control' %></h4>  
+    
+    
+    <h4><%= f.input :deadline, label: 'Prazo', class: 'form-control' %></h4>  
+    
+    
+   
+   
+   </form>
+    
+  </div>
+  
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  <br>
+<% end %>
+  
+  
+
+
