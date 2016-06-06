@@ -3,13 +3,13 @@
   
   <%= simple_form_for(@project) do |f| %>
   <%= f.error_notification %>
-<form class="form-horizontal">
+
   <div class="box-body">
       
      <h4><%= f.input :head, label: 'Head', class: 'form-control' %></h4><br> 
    
     
-   <h4><%= f.input :manager, class: 'form-control' %></h4>   
+   <h4><%= f.input :manager_name, class: 'form-control' %></h4>   
   
    <h4><%= f.input :project_title, label: 'Título do projeto', class: 'form-control' %></h4>   
     
@@ -30,20 +30,21 @@
     
     <h4> <%= f.input :resources_id, label: 'Recursos' , class: 'form-control' %></h4>  
     
+    <%= simple_fields_for :deadline do |ff| %>
+    <h4><%= ff.input :initial_date, label: 'Início', class: 'form-control' %></h4>
+    <h4><%= ff.input :final_date, label: 'Fim', class: 'form-control' %></h4>
+    <%= ff.input :project_id, :as => :hidden, :input_html => { :value => @project.id } %>
     
-    <h4><%= f.input :deadline, label: 'Prazo', class: 'form-control' %></h4>  
-    
-    
+    <% end %>
    
-   
-   </form>
+
     
   </div>
   
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+ 
+    <%= f.button :submit, class: 'btn btn-default' %>
+  
   <br>
 <% end %>
   

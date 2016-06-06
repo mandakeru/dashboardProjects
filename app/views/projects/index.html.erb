@@ -8,13 +8,13 @@
 <table class="table table-bordered table-striped dataTable">
   <thead>
     <tr>
-      <th>Head</th>
-      <th>Manager</th>
-      <th>Project title</th>
-      <th>Area</th>
-      <th>Description</th>
-      <th>Representant</th>
-      <th>Sprints</th>
+      <!-- th>Head</th -->
+      <!-- th>Manager</th-->
+      <th>Título</th>
+      <!--th>Area</th-->
+      <th>Descrição</th>
+      <!--th>Representant</th-->
+      <!--th>Sprints</th-->
       <th>Status</th>
       <th>Resources</th>
       <th>Deadline</th>
@@ -25,19 +25,19 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= project.head %></td>
-        <td><%= project.manager %></td>
+        <!--td><%#= project.head %></td-->
+        <!--td><%#= project.manager %></td-->
         <td><%= project.project_title %></td>
-        <td><%= project.area %></td>
+        <!--td><%#= project.area %></td-->
         <td><%= project.description %></td>
-        <td><%= project.representant %></td>
-        <td><%= project.sprints %></td>
+        <!--td><%#= project.representant %></td-->
+        <!--td><%#= project.sprints %></td-->
         <td><%= project.status %></td>
         <td><%= project.resources_id %></td>
-        <td><%= project.deadline %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= project.deadline %></td>
+        <td><%= link_to 'Ver', project, class: "btn btn-default" %></td>
+        <td><%= link_to 'Editar', edit_project_path(project), class: "btn btn-default" %></td>
+        <td><%= link_to 'Deletar', project, method: :delete,class: "btn btn-default",  data: { confirm: 'Confirma?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,7 +45,7 @@
 
 <br>
 
-<button class="btn btn-default"><%= link_to 'Criar Projeto', new_project_path %></button>
+<%= link_to 'Criar Projeto', new_project_path, class: 'btn btn-default' %>
 
   </div>
   

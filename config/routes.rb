@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :resources
   resources :issues
   resources :projects
+  
   devise_for :users
   root 'welcome#index'
   

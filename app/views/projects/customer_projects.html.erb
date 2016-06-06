@@ -1,11 +1,6 @@
 <div class="box box-primary">
-  <div class="box-body">
-
-<p id="notice"><%= notice %></p>
-
-<h1>Todos os recursos</h1>
-
-<table class="table table-bordered table-striped dataTable">
+      <div class="box-body">
+          <table class="table table-bordered table-striped dataTable">
   <thead>
     <tr>
       <th>Nome</th>
@@ -17,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @resources.each do |resource| %>
+    <% @resources.where(project_id[self.id]) do |resource| %>
       <tr>
         <td><%= resource.name %></td>
         <td><%= resource.resource_id %></td>
@@ -30,9 +25,6 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Cadastrar Recurso', new_resource_path, class: 'btn btn-default' %>
-</div>
+          
+      </div>
 </div>

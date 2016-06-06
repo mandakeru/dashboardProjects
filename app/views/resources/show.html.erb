@@ -1,19 +1,27 @@
+<div class="box box-primary">
+  <div class="box-body">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @resource.name %>
+</p>
+<p>
+  <strong>Matrícula:</strong>
+  <%= @resource.resource_id %>
 </p>
 
 <p>
-  <strong>Function:</strong>
+  <strong>Função:</strong>
   <%= @resource.function %>
 </p>
 
 <p>
-  <strong>Alocation:</strong>
+  <strong>Alocação:</strong>
   <%= @resource.alocation %>
 </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
-<%= link_to 'Back', resources_path %>
+<%= link_to 'Editar', edit_resource_path(@resource), class: 'btn btn-default' %> 
+<%= link_to 'Voltar', :back, class: 'btn btn-default' %>
+</div>
+</div>

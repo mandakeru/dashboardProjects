@@ -1,12 +1,16 @@
+
+<div class="box-body">
+
 <%= simple_form_for(@sprint) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :initial_date %>
-    <%= f.input :final_date %>
-  </div>
+  
+   <h3><%= f.input :initial_date, label: 'Data Inicial' %></h3><br> 
+   <h3><%= f.input :final_date, label: 'Data Final' %></h3> 
+  
 
-  <div class="form-actions">
+  
     <%= f.button :submit %>
-  </div>
+  
 <% end %>
+</div>

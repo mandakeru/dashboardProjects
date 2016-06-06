@@ -28,7 +28,7 @@ class ResourcesController < ApplicationController
 
     respond_to do |format|
       if @resource.save
-        format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
+        format.html { redirect_to @resource, notice: 'Recurso criado com sucesso.' }
         format.json { render :show, status: :created, location: @resource }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @resource.update(resource_params)
-        format.html { redirect_to @resource, notice: 'Resource was successfully updated.' }
+        format.html { redirect_to @resource, notice: 'Recurso editado com sucesso.' }
         format.json { render :show, status: :ok, location: @resource }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ResourcesController < ApplicationController
   def destroy
     @resource.destroy
     respond_to do |format|
-      format.html { redirect_to resources_url, notice: 'Resource was successfully destroyed.' }
+      format.html { redirect_to resources_url, notice: 'Recurso deletado com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ResourcesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:name, :function, :alocation)
+      params.require(:resource).permit(:name, :function, :alocation, :resource_id)
     end
 end

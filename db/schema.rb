@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531183407) do
+ActiveRecord::Schema.define(version: 20160602191331) do
 
   create_table "deadlines", force: :cascade do |t|
     t.date     "initial_date"
     t.date     "final_date"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "project_id"
+    t.integer  "deadlineable_id"
+    t.string   "deadlineable_type"
   end
 
   create_table "issues", force: :cascade do |t|
@@ -40,7 +43,6 @@ ActiveRecord::Schema.define(version: 20160531183407) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "head"
-    t.string   "manager"
     t.string   "project_title"
     t.integer  "area"
     t.text     "description"
@@ -48,17 +50,19 @@ ActiveRecord::Schema.define(version: 20160531183407) do
     t.integer  "sprints"
     t.integer  "status"
     t.integer  "resources_id"
-    t.date     "deadline"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "manager_name"
   end
 
   create_table "resources", force: :cascade do |t|
     t.string   "name"
     t.string   "function"
     t.string   "alocation"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "resource_id"
+    t.integer  "project_id"
   end
 
   create_table "sprints", force: :cascade do |t|
@@ -66,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160531183407) do
     t.date     "final_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "title"
   end
 
   create_table "tasks", force: :cascade do |t|

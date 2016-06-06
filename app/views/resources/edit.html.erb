@@ -1,6 +1,11 @@
-<h1>Editing Resource</h1>
+<div class="box box-primary">
+  <div class="box-body">
+
+<h1>Editar Recurso</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @resource %> |
-<%= link_to 'Back', resources_path %>
+<%= link_to 'Ver', @resource, class: 'btn btn-default' %> 
+<%= link_to 'Cancelar', :back, class: 'btn btn-default'%>
+</div>
+</div>
