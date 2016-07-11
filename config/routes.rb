@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :payments
+  resources :people
   resources :managers
   resources :deadlines
   resources :tasks

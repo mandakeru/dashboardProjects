@@ -48,7 +48,7 @@ gem 'morrisjs-rails'
 gem 'switchery-rails'
 gem 'bootstrap-select-rails'
 gem 'fastclick-rails'
-gem 'twitter-bootstrap-rails'
+
 gem 'jasny-bootstrap-rails'
 
 
