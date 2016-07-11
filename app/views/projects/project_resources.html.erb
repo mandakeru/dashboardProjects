@@ -1,0 +1,12 @@
+<div class="container">
+    <h4><%= @projects.name %></h4>
+    <hr>
+    <% @resources.each do |resource| %>
+      <tr>
+        <td><%= resource.name %></td>
+        <td><%= resource.resource_id %></td>
+        <td><%= resource.function %></td>
+        <td><%= resource.alocation %></td>
+        <td></td>
+        <% end %>
+</div>

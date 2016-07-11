@@ -6,33 +6,33 @@
 
   <div class="box-body">
       
-     <h4><%= f.input :head, label: 'Head', class: 'form-control' %></h4><br> 
+    <%= f.input :head, label: false, class: 'form-control' %><br> 
    
     
-   <h4><%= f.input :manager_name, class: 'form-control' %></h4>   
+  <%= f.input :manager_name, label: false, class: 'form-control' %>   
   
-   <h4><%= f.input :project_title, label: 'Título do projeto', class: 'form-control' %></h4>   
-    
-    <h4><%= f.input :area, class: 'form-control' %></h4>  
-    
-    
-    <h4><%= f.input :description,label: 'Descrição', class: 'form-control' %></h4>  
-    
-    
-    <h4><%= f.input :representant, label: 'Representante externo',  class: 'form-control' %></h4>  
-   
-   
-    <h4><%= f.input :sprints, label: 'Sprints/total', class: 'form-control' %></h4>   
-    
-    
-    <h4><%= f.input :status, label: 'Status atual', class: 'form-control' %></h4>   
-    
-    
-    <h4> <%= f.input :resources_id, label: 'Recursos' , class: 'form-control' %></h4>  
+  <%= f.input :project_title, label: false, class: 'form-control' %> 
+  
+ <%= f.input :area, label: false, class: 'form-control' %>
+ 
+ 
+ <%= f.input :description,label: false, class: 'form-control' %> 
+ 
+ 
+ <%= f.input :representant, label: false,  class: 'form-control' %>
+ 
+ 
+ <%= f.input :sprints, label: false, class: 'form-control' %> 
+ 
+ 
+ <%= f.input :status, label: false, class: 'form-control' %>   
+ 
+ 
+  <%= f.input :resources_id, label: false , class: 'form-control' %>  
     
     <%= simple_fields_for :deadline do |ff| %>
-    <h4><%= ff.input :initial_date, label: 'Início', class: 'form-control' %></h4>
-    <h4><%= ff.input :final_date, label: 'Fim', class: 'form-control' %></h4>
+    <%= ff.input :initial_date, label: false, class: 'form-control' %>
+    <%= ff.input :final_date, label: false, class: 'form-control' %>
     <%= ff.input :project_id, :as => :hidden, :input_html => { :value => @project.id } %>
     
     <% end %>
