@@ -3,7 +3,7 @@
 <head>
   <meta charset = "utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>DashboardProjects | GLTb</title>
+  <title>DashboardProjects</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -50,7 +50,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <%= image_tag 'user2.jpg', class: "img-circle", alt:"User Image" %>
                       </div>
                       <h4>
                         Support Team

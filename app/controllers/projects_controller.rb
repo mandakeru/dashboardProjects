@@ -17,6 +17,13 @@ class ProjectsController < ApplicationController
     @resources = Resource.all
     
   end
+  
+ def project_resources
+   
+   
+ 
+ 
+ end
 
   # GET /projects/new
   def new
