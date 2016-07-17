@@ -52,6 +52,7 @@ gem 'fastclick-rails'
 
 gem 'jasny-bootstrap-rails'
 
+gem 'rails_12factor', group: :production
 
 
 # Use Capistrano for deployment
