@@ -25,5 +25,4 @@ production:
   encoding: unicode
   database: proficiency-test_development
   pool: 5
-  username: postgres
-  password: "123"
+  
